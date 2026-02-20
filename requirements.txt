@@ -1,0 +1,29 @@
+# Core GraphRAG
+graphrag>=1.0.0
+
+# Neo4j
+neo4j>=5.0.0
+neo4j-graphrag>=1.0.0
+
+# LLM Frameworks (pick one or both)
+llama-index>=0.11.0
+llama-index-graph-stores-neo4j>=0.4.0
+langchain>=0.3.0
+langchain-openai>=0.2.0
+langchain-neo4j>=0.2.0
+
+# Entity extraction & NLP
+spacy>=3.7.0
+
+# Visualization
+pyvis>=0.3.0
+networkx>=3.0
+matplotlib>=3.8.0
+
+# Data processing
+pandas>=2.0.0
+python-dotenv>=1.0.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.0.0
