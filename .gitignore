@@ -222,3 +222,7 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,linux
+
+# claude code relevant
+.omc/
+.claude/
