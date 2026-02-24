@@ -241,3 +241,7 @@ pyrightconfig.json
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+.python-version
+
+# data
+data/
