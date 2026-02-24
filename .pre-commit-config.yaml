@@ -1,0 +1,60 @@
+# .pre-commit-config.yaml
+minimum_pre_commit_version: "3.2.0"
+default_language_version:
+  python: python3
+
+# 프로젝트에서 굳이 훅을 돌릴 필요 없는 경로는 여기서 크게 쳐내는 편이 관리가 편합니다.
+exclude: |
+  (?x)^(
+    data/|
+    outputs/|
+    .*\.ipynb_checkpoints/|
+    \.venv/|
+    dist/|
+    build/
+  )
+
+repos:
+  # 1) “기본 위생” 훅들: whitespace / yaml / 큰 파일 / 충돌 마커 등
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=1024] # 1MB 초과 파일 커밋을 기본적으로 막음(원하면 조정)
+      - id: detect-private-key
+
+  # 2) Ruff: lint + (선택)자동수정 + format
+  # --fix를 쓰면 ruff-check를 ruff-format보다 먼저 두는 게 권장됩니다.  [oai_citation:1‡GitHub](https://github.com/astral-sh/ruff-pre-commit)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.2
+    hooks:
+      - id: ruff-check
+        types_or: [python, pyi] # 노트북(.ipynb)까지 린트하고 싶으면 여기에 jupyter를 추가
+        args: [--fix, --exit-non-zero-on-fix]
+      - id: ruff-format
+        types_or: [python, pyi]
+
+  # 3) 노트북 output 제거: 커밋에 실행결과/이미지/카운트가 섞여서 diff 폭발하는 걸 방지
+  # nbstripout은 “커밋 직전 파일을 수정”합니다(working copy 변경).  [oai_citation:2‡GitHub](https://github.com/kynan/nbstripout)
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.9.1
+    hooks:
+      - id: nbstripout
+        files: \.ipynb$
+        # 필요 시 메타데이터까지 더 지우고 싶다면(extra-keys 사용 예시는 nbstripout 문서 참고)
+        # args: ['--extra-keys=metadata.celltoolbar cell.metadata.heading_collapsed']
+
+  # 4) (선택) 스펠링/오타 체크
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell
+        files: \.(py|md|rst|txt|yml|yaml|toml)$
+        # 프로젝트별로 자주 쓰는 단어는 무시 목록에 추가
+        # args: ["-L", "nd,ist,te"]
