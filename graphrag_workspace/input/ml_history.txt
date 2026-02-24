@@ -1,30 +1,30 @@
 
-The field of deep learning was revolutionized by several key breakthroughs. In 2012, 
-Geoffrey Hinton and his students Alex Krizhevsky and Ilya Sutskever developed AlexNet, 
-which won the ImageNet competition by a large margin. This demonstrated that deep 
+The field of deep learning was revolutionized by several key breakthroughs. In 2012,
+Geoffrey Hinton and his students Alex Krizhevsky and Ilya Sutskever developed AlexNet,
+which won the ImageNet competition by a large margin. This demonstrated that deep
 convolutional neural networks could dramatically outperform traditional computer vision methods.
 
-Yann LeCun, working at Bell Labs and later Facebook AI Research (FAIR), had pioneered 
-convolutional neural networks in the 1990s with LeNet, which was used for digit recognition. 
+Yann LeCun, working at Bell Labs and later Facebook AI Research (FAIR), had pioneered
+convolutional neural networks in the 1990s with LeNet, which was used for digit recognition.
 His work laid the foundation for AlexNet and all subsequent CNN architectures.
 
-Yoshua Bengio, based at the University of Montreal and Mila, made fundamental contributions 
-to sequence modeling and attention mechanisms. His research group explored neural machine 
+Yoshua Bengio, based at the University of Montreal and Mila, made fundamental contributions
+to sequence modeling and attention mechanisms. His research group explored neural machine
 translation and the attention mechanism that would later inspire the Transformer architecture.
 
-In 2017, Ashish Vaswani and colleagues at Google Brain published "Attention Is All You Need," 
-introducing the Transformer architecture. This replaced recurrent neural networks with 
-self-attention mechanisms, enabling much more efficient parallel training. The Transformer 
-became the foundation for BERT (developed by Jacob Devlin at Google) and GPT (developed by 
+In 2017, Ashish Vaswani and colleagues at Google Brain published "Attention Is All You Need,"
+introducing the Transformer architecture. This replaced recurrent neural networks with
+self-attention mechanisms, enabling much more efficient parallel training. The Transformer
+became the foundation for BERT (developed by Jacob Devlin at Google) and GPT (developed by
 Alec Radford at OpenAI).
 
-Ian Goodfellow, while a student of Yoshua Bengio at the University of Montreal, invented 
-Generative Adversarial Networks (GANs) in 2014. GANs use two competing neural networks — 
-a generator and a discriminator — to create realistic synthetic data. This approach 
-revolutionized generative modeling and found applications in image synthesis, style transfer, 
+Ian Goodfellow, while a student of Yoshua Bengio at the University of Montreal, invented
+Generative Adversarial Networks (GANs) in 2014. GANs use two competing neural networks —
+a generator and a discriminator — to create realistic synthetic data. This approach
+revolutionized generative modeling and found applications in image synthesis, style transfer,
 and data augmentation.
 
-The three pioneers — Hinton, LeCun, and Bengio — were jointly awarded the Turing Award in 
-2018 for their contributions to deep learning. They are often referred to as the "Godfathers 
-of Deep Learning." Their work at institutions including the University of Toronto, NYU, and 
+The three pioneers — Hinton, LeCun, and Bengio — were jointly awarded the Turing Award in
+2018 for their contributions to deep learning. They are often referred to as the "Godfathers
+of Deep Learning." Their work at institutions including the University of Toronto, NYU, and
 the University of Montreal created the foundation for modern artificial intelligence.
